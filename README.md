@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+﻿**RBAC Frontend**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **Role-Based Access Control (RBAC)** frontend application built using **React**. This application allows an administrator to manage users, roles, and permissions in an intuitive dashboard interface. The data is statically provided (no backend) to simulate an RBAC system.
 
-## Available Scripts
+**Features**
 
-In the project directory, you can run:
+●● **User Management**: Display a list of users with their assigned roles.
 
-### `npm start`
+●● **Role Management**: View and manage different roles with associated permissions. ●● **Permissions Management**: View and assign permissions to roles.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+●● **Dynamic UI**: Built with modern UI practices and styled for ease of use.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Technologies Used**
 
-### `npm test`
+●● **React**: A JavaScript library for building user interfaces.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React Router**: For routing and navigation between components.
+- **React Hooks**: For managing component state and side effects.
+- **Axios**: For making API calls to simulate data fetching (currently using static data).
+- **React Context API**: For global state management (if implemented).
 
-### `npm run build`
+●● **Tailwind CSS**: A utility-first CSS framework used to style the application, ensuring a
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+responsive and modern layout.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+●● **FontAwesome**: For adding scalable vector icons for social media, actions, and other UI
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+elements.
 
-### `npm run eject`
+●● **React Table**: For managing and displaying tables with role and user data dynamically.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Project Setup**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the Repository**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git clone https://github.com/yourusername/rbac-frontend.git cd rbac-frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install Dependencies**
 
-## Learn More
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Start the Development Server**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm start
 
-### Code Splitting
+The app will be running at http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Open the Application in Your Browser**
 
-### Analyzing the Bundle Size
+Navigate to http://localhost:3000 to view the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Folder Structure**
 
-### Making a Progressive Web App
+●● **/src**: Contains all the frontend code and components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **/components**: Reusable components such as tables and buttons.
+- **/pages**: Pages like the Dashboard.
+- **/services**: API calls (simulated static data in this case).
+- **/styles**: Tailwind CSS setup.
 
-### Advanced Configuration
+**Simulated API Endpoints**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+In the absence of a backend, the following functions are used to simulate data retrieval:
 
-### Deployment
+●● **getUsers()**: Fetches the list of users.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+●● **getRoles()**: Fetches the list of roles.
 
-### `npm run build` fails to minify
+●● **getPermissions()**: Fetches the list of permissions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Example Static Data (Simulated API)**
+
+**Users:** json
+
+[
+
+{ "id": 1, "name": "Alice", "role": "Admin" }, { "id": 2, "name": "Bob", "role": "User" }
+
+]
+
+**Roles:** json
+
+[
+
+{ "id": 1, "name": "Admin", "permissions": ["Create", "Read", "Update", "Delete"] },
+
+{ "id": 2, "name": "User", "permissions": ["Read"] }
+
+]
+
+**Permissions:** json
+
+[
+
+{ "id": 1, "permission": "Create" }, { "id": 2, "permission": "Read" },
+
+{ "id": 3, "permission": "Update" }, { "id": 4, "permission": "Delete" }
+
+]
+
+**Contributing**
+
+Feel free to fork the repository and submit issues and pull requests. Contributions are welcome!
+
+1. Fork the project.
+1. Create your feature branch (git checkout -b feature/NewFeature).
+1. Commit your changes (git commit -m 'Add new feature').
+1. Push to the branch (git push origin feature/NewFeature).
+1. Create a new Pull Request or Just Clone the project.
